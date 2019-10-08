@@ -1,0 +1,386 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+@font-face{
+	font-family: ubuntu-bi;
+	src: url("Ubuntu-BoldItalic.ttf");
+}
+@font-face{
+	font-family: ubuntu-mi;
+	src: url("Ubuntu-MediumItalic.ttf");
+}
+@font-face{
+	font-family: ubuntu-m;
+	src: url("Ubuntu-Medium.ttf");
+}
+@font-face{
+	font-family: courgette;
+	src: url("Courgette-Regular.ttf");
+}
+@font-face{
+	font-family: permanent-marker;
+	src: url("PermanentMarker-Regular.ttf");
+}
+@font-face{
+	font-family: tradewinds;
+	src: url("TradeWinds-Regular.ttf");
+}
+@font-face{
+	font-family: monsterrat;
+	src: url("Montserrat-Medium.ttf");
+}
+html{
+	user-select: none;
+}
+#header{
+	background: radial-gradient(circle, rgba(192,192,192, .5), rgba(128,128,128,1));
+	position: fixed;
+	width: 100%;
+	height: 58px;
+	top: 0;
+	pointer-events: none;
+}
+#header p{
+	text-align: center;
+	font-size: 33px;
+	padding: 4px 0 0 0;
+	font-family: tradewinds, san-serif;
+	color: rgba(40,43,48,.8);
+	text-shadow: 1.5px 2px 2px;
+}
+#footer{
+	background: rgba(220,220,220, 1);
+	bottom: 0;
+	position: fixed;
+	width: 100%;
+	height: 38px;
+	pointer-events: none;
+}
+#footer p{
+	text-align: center;
+	font-size: 17px;
+	padding: 4px 0 0 0;
+	font-family: courgette, san-serif;
+	color: black;
+	font-weight: bold;
+	padding: 7px 0 0 0;
+}
+#content{
+	display: block;
+	background: rgb(239, 239, 238);
+	position: fixed;
+	top: 58px; right: 0; left: 0; bottom: 38px; margin: auto;
+	width: 100%;
+	overflow: auto;
+}
+#contentbg{
+	background-image: url("b9.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	user-select: none;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: -1;
+}
+#logout img{
+	position: fixed;
+	padding: 5px;
+	width: 50px;
+	right: 0;
+	z-index: 1;
+	cursor: pointer;
+}
+
+/*Styling of the containers in the content area*/
+
+#input1{
+	display: flex;
+	height: auto;
+	box-sizing: border-box;
+	padding: 34px 0;
+	width: 640px;
+	margin: auto;
+}
+#input2{
+	display: flex;
+	background: rgb(239, 239, 238);
+	height: auto;
+	width: 640px;
+	flex-direction: column;
+	box-sizing: border-box;
+	padding-bottom: 24px;
+	box-shadow: 0 15px 25px rgba(0,0,0,.7);
+}
+#iheading{
+	height: auto;
+	width: 640px;
+}
+#iheading p{
+	text-align: center;
+	font-size: 27px;
+	padding: 32px;
+	font-family: monsterrat, arial;
+	color: black;
+	font-weight: bold;
+}
+#i2oc{
+	display: flex;
+	margin-top: 17px;
+	height: auto;
+	padding-bottom: 20px;
+	box-sizing: border-box;
+	width: 640px;
+	flex-direction: column;
+}
+#i2oh{
+	background: rgb(163, 29, 8);
+	height: auto;
+	width: 640px;
+	padding: 14px;
+	padding-left: 34px;
+	box-sizing: border-box;
+}
+#i2oh p{
+	font-size: 20px;
+	font-family: monsterrat, arial;
+	color: rgb(239, 239, 238);
+	font-weight: bold;
+}
+#i2o{
+	height: auto;
+	width: 572px;
+	margin: 0 auto;
+	padding: 0px 10px 0 10px;
+}
+#i2controls{
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	box-sizing: border-box;
+	width: 640px;
+}
+.i2buttons{
+	margin: 10px 0;
+	margin-right: -8px;
+	margin-left: 24px;
+	border: none;
+	outline: none;
+	background: rgb(66, 133, 244);
+	width: 88px;
+	height: 36px;
+	border-radius: 3px;
+	cursor: pointer;
+	color: white;
+	font-family: ubuntu-m, arial;
+	font-size: 17px;
+	box-shadow: 0 1.3px 3px rgba(0,0,0,.7);
+	position: relative;
+}
+.i2buttons:focus{
+	background: rgb(53, 107, 196);
+	box-shadow: 0 5px 10px rgba(0,0,0,.4);
+}
+#i2smsgo{
+	height: auto;
+	padding: 10px;
+	width: 640px;
+	box-sizing: border-box;
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.i2smsg{
+	height: auto;
+	width: auto;
+	padding: 10px;
+	box-sizing: border-box;
+}
+.i2smsg p{
+	font-family: ubuntu-m;
+	text-align: center;
+	font-size: 19px;
+}
+
+/*results.php*/
+.i2ro{
+	width: 1230px;
+	height: auto;
+	box-sizing: border-box;
+	display: flex;
+	margin-top: 10px;
+	margin-left: 24px;
+	margin-right: 24px;
+	padding: 4px;
+	overflow-x: auto;
+}
+.i2r{
+	display: flex;
+	width: auto;
+	height: auto;
+	box-sizing: border-box;
+	margin: auto;
+}
+
+/*mcp.php*/
+#i2noti{
+	height: auto;
+	width: 640px;
+	padding-top: 14px;
+	padding-left: 34px;
+	box-sizing: border-box;
+}
+#i2noti p{
+	font-size: 20px;
+	font-family: monsterrat, arial;
+	color: red;
+	font-weight: bold;
+}
+#i2mcpo{
+	width: 592px;
+	height: auto;
+	box-sizing: border-box;
+	display: flex;
+	margin: 10px auto 0 auto;
+	padding: 4px;
+}
+#i2mcp{
+	width: auto;
+	height: auto;
+	box-sizing: border-box;
+	padding: 4px;
+	margin: auto;
+}
+#i2mcp table{
+	border-collapse: collapse;
+	font-size: 17px;
+}
+#i2mcp table th{
+	padding: 10px;
+	font-family: ubuntu-m;
+}
+#i2mcp table td{
+	padding: 10px 30px 10px 0;
+}
+#i2mcp table th span{
+	color: red;
+	font-size: 12.5px;
+	font-weight: 600;
+}
+
+/*results.php*/
+/*Styling the table*/
+#i2r table{
+	font-family: ubuntu-m;
+	border-collapse: collapse;
+	font-size: 17px;
+}
+#i2r table th{
+	color: rgb(239, 239, 238);
+	height: 50px;
+	width: 50px;
+	background: rgb(123, 161, 7);
+}
+#i2r table td{
+	text-align: center;
+	padding: 10px;
+}
+#i2r table td, #i2r table th{
+	border: 1px solid rgb(192,192,192);
+	padding: 10px;
+}
+#i2r table tr:hover{
+	background: rgb(152,251,152);
+}
+/*Styling the radio buttons*/
+.label{
+	display: inline;
+	width: auto;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.label input{
+	position: absolute;
+	opacity: 0;
+}
+.checkmark{
+	display: flex;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 23px;
+	width: 23px;
+	background-color: #eee;
+	border-radius: 50%;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid rgb(128,128,128);
+	box-sizing: border-box;
+	outline: none;
+}
+.clickeffect{
+	width: 0px;
+	height: 0px;
+	border-radius: 100px;
+	background: rgb(239, 239, 238);
+	transition-duration: .001s;
+	transition-timing-function: ease-in;
+	transition-property: all;
+	position: absolute;
+}
+.label input:checked ~ .checkmark .clickeffect{
+	width: 30px;
+	height: 30px;
+	animation: clickeffect 0.8s ease-out;
+	animation-fill-mode: forwards;
+}
+.label input:checked ~ .checkmark{
+	background-color: white;
+	border: 2px solid rgb(66, 134, 244);
+}
+@keyframes clickeffect{
+	50% {
+    transform: scale(1.5, 1.5);
+    opacity: 0;
+	}
+	99% {
+    transform: scale(0.001, 0.001);
+    opacity: 0;
+	}
+	100% {
+    transform: scale(0.001, 0.001);
+    opacity: 1;
+	}
+}
+.checkmark:after{
+	content: "";
+	position: absolute;
+	display: none;
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+	background: rgb(66, 134, 244);
+}
+.label input:checked ~ .checkmark:after{
+	display: block;
+}
+.labelstyle{
+	display: inline;
+}
+.label p{
+	font-family: ubuntu-m;
+}
+.i2ot{
+	margin-top: 15px;
+}

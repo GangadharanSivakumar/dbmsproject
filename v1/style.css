@@ -1,0 +1,248 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+@font-face{
+	font-family: ubuntu-bi;
+	src: url("Ubuntu-BoldItalic.ttf");
+}
+@font-face{
+	font-family: ubuntu-mi;
+	src: url("Ubuntu-MediumItalic.ttf");
+}
+@font-face{
+	font-family: ubuntu-m;
+	src: url("Ubuntu-Medium.ttf");
+}
+@font-face{
+	font-family: courgette;
+	src: url("Courgette-Regular.ttf");
+}
+@font-face{
+	font-family: permanent-marker;
+	src: url("PermanentMarker-Regular.ttf");
+}
+@font-face{
+	font-family: tradewinds;
+	src: url("TradeWinds-Regular.ttf");
+}
+#image{
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	background: url("kodw2.jpg") no-repeat fixed;
+	background-size: cover;
+	z-index: -1;
+}
+
+/*For background blurring effect*/
+#bluur{
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 2;
+	margin: auto;
+	width: 250px;
+	height: 165px;
+	padding: 40px;
+	background: url("kodw2.jpg") no-repeat fixed;
+	background-size: cover;
+	filter: blur(10px);
+}
+/*For the main login box*/
+.login{
+	background-color: rgba(239, 239, 238, .8);
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 250px;
+	height: 165px;
+	margin: auto;
+	padding: 40px;
+	box-shadow: 0 15px 25px rgba(0,0,0,.7);
+	z-index: 3;
+}
+/*For paragraph and span tags inside the login box*/
+.login p, span{
+	padding: 20px 0 0px 1px;
+	font-weight: bold;
+	font-family: calibri;
+	color: #87909c;
+	position: absolute;
+	font-size: 17px;
+	pointer-events: none;
+	transition: .4s;
+}
+#pswbox p{
+	top: 100px;
+}
+#minbox p{
+	top: 30px;
+}
+.box span{
+	top:30px;
+	opacity: 0;
+	left: 40px;
+}
+.login input, select{
+	width: 100%;
+	margin: 0 0 30px 0;
+}
+.login select, input[type="password"]{
+	border: none;
+	border-bottom: 0.1px solid #87909c;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	font-size: 15px;
+	transition: border-bottom 0.5s;
+}
+.login select{
+	font-weight: bold;
+}
+.login .box select:focus ~ span,
+.login .box select:valid ~ span{
+	padding: 0 1px 10px 0;
+	color: rgb(66, 133, 244);
+	font-size: 14px;
+	opacity: 1;
+	transition: .5s cubic-bezier(0,0,0,30);
+	font-weight: bold;
+}
+.login .box select:focus, input:focus,
+.login .box select:valid, input:valid{
+	border-bottom: 1px solid rgb(66, 133, 244);
+}
+.login .box input:focus ~ p,
+.login .box input:valid ~ p{
+	padding: 0 1px 10px 0;
+	color: rgb(66, 133, 244);
+	font-size: 14px;
+	font-weight: bold;
+}
+.login .box select:focus ~ p,
+.login .box select:valid ~ p{
+	padding: 5px 1px 10px 5px;
+	font-size: 1px;
+	opacity: 0;
+	font-weight: bold;
+}
+#title{
+	background-color: rgba(239, 239, 238, .2);
+	position: fixed;
+	width: 100%;
+	height: 58px;
+	top: 0;
+	z-index: 3;
+}
+#titleb{
+	position: fixed;
+	top: 0;
+	z-index: 2;
+	width: 100%;
+	height: 58px;
+	background: url("kodw2.jpg") no-repeat fixed;
+	background-size: cover;
+	filter: blur(10px);
+}
+#title p{
+	text-align: center;
+	top: 0; left: 0; right: 0; bottom: 0; margin: auto;
+	font-size: 33px;
+	padding: 4px 0 0 0;
+	font-family: tradewinds, san-serif;
+	color: rgba(40,43,48,.8);
+	text-shadow: 1.5px 2px 2px;
+	cursor: default;
+}
+/*To hide the first line of the select input*/
+#opt{
+	display:none;
+}
+/*For button- Authenticate styling*/
+#butt{
+	border: none;
+	outline: none;
+	background: rgb(66, 133, 244);
+	padding: 10px 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	color: white;
+	font-weight: bold;
+	font-family: Sans-serif;
+	box-shadow: 0 1.3px 3px rgba(0,0,0,.7);
+	position: relative;
+	float: right;
+}
+#footerb{
+	position: fixed;
+	bottom: 0;
+	z-index: 2;
+	width: 100%;
+	height: 58px;
+	background: url("kodw2.jpg") no-repeat fixed;
+	background-size: cover;
+	filter: blur(10px);
+}
+#footer{
+	background: rgba(239, 239, 238, .2);
+	bottom: 0;
+	position: fixed;
+	width: 100%;
+	height: 38px;
+	z-index: 3;
+}
+#footer p{
+	text-align: center;
+	font-size: 17px;
+	padding: 4px 0 0 0;
+	font-family: courgette, san-serif;
+	color: black;
+	font-weight: bold;
+	padding: 7px 0 0 0;
+	cursor: default;
+}
+option{
+	font-weight: bold;
+}
+#nrerror{
+	text-align: center;
+	position: fixed;
+	top: 398px; bottom: 0; left: 0; right: 141px;
+	font-family: ubuntu-m, calibri;
+	color: red;
+	font-size: 14px;
+	z-index: 4;
+}
+#voteerrorb{
+	margin-top: 100px;
+	background: none;
+	height: auto;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+}
+#voteerror{
+	width: auto;
+	height: auto;
+	background: rgba(239, 239, 238, 1);
+	padding: 10px;
+	box-sizing: border-box;
+	box-shadow: 0 4px 10px rgba(0,0,0,.7);
+	border-radius: 5px;
+}
+#voteerror p{
+	text-align: center;
+	font-family: ubuntu-m;
+	font-size: 19px;
+	color: rgb(178,34,34);
+}
